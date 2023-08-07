@@ -1,0 +1,25 @@
+﻿<Window x:Class="Equipment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equipment"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content ="Set Silencer" Name ="SetSilencer"  Grid.Column="1" Click="SetSilencerDecorator"/>
+        <Button Click="SetAimDecorator" Name ="SetAim" Content="Set Aim"/>
+        <ProgressBar Grid.Row="1" x:Name="DamageProgressBar" Height="30" Margin="0,56,0,131"/>
+        <ProgressBar Grid.Row="1" x:Name="AccuracyProgressBar" Margin="0,124,0,63"/>
+        <Label Content="Damage" Grid.Row="1" Margin="0,30,0,146" />
+        <Label Content="Accuracy" Grid.Row="2" Margin="0,91,236,71"/>
+    </Grid>
+</Window>
